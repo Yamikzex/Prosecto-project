@@ -1,0 +1,16 @@
+time: This module provides various time-related functions, and it is used here to measure the time taken for reading or writing files.
+os: This module provides a way of interacting with the operating system, and it is used here to check if a file already exists.
+
+The read_file function takes a file name as an argument.
+It attempts to open the file in read mode ('r') using a with statement to ensure proper file handling.
+If the file exists, it reads its content, prints it, and calculates and prints the time taken to read the file.
+If the file is not found, it catches a FileNotFoundError and prints a corresponding message.
+
+The write_file function takes a file name and content as arguments.
+It checks if the file name ends with ".txt" and appends it if not.
+It then checks if the file already exists using os.path.exists. If it does, it prints a message and returns without writing.
+If the file does not exist, it opens the file in write mode ('w'), writes the content, and prints the time taken to write.
+
+The main function is the entry point of the program.
+It displays a welcome message and enters a loop that presents options to the user: read a file, write to a file, or exit.
+It takes user input to determine the chosen option and executes the corresponding function (read_file, write_file, or exit the loop).
